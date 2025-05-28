@@ -1,0 +1,176 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="css/css.css"  />
+<link rel="icon" href="./images/33.ico">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel="stylesheet" href="./css/style.css">
+
+
+
+
+</head>
+
+<body>
+<div class="wrap clearfix">
+<!-- left nav start -->
+  <div class="index_left fl">
+   <div class="logo"><img src="./images/logo.jpg"  /></div>    
+
+    <div class="nav">
+      <ul>
+        <li id="nav_01"><a href="index.html" >首页</a></li>
+        <li><a href="list.html" >各县区、经济功能区</a></li>
+        <li><a href="show.html" >市直</a></li>
+        <li><a href="about.html" >直属机构</a></li>
+        <li><a href="other.html">其它单位</a></li>
+        <li><a href="password2.html" >政务公开科账号密码</a></li>
+        <li><a href="textcompare.html" >文本比较</a></li>
+
+      </ul>
+
+    </div>
+
+
+<br />
+<br />
+<br />
+
+
+
+<!--
+<iframe scrolling="no" src="https://widget.tianqiapi.com/?style=ts&skin=mango&color=33CCFF" frameborder="0" width="100%" height="220" allowtransparency="true"></iframe>
+-->
+
+<!--
+<iframe scrolling="no" src="https://widget.tianqiapi.com/?style=ts&skin=gif&color=FFFFFF" frameborder="0" width="100%" height="220" allowtransparency="true"></iframe>
+-->
+
+<iframe width="300" height="25" src="https://i.tianqi.com/?c=code&a=getcode&id=10&py=maoming&icon=1" frameborder="0"></iframe>
+
+
+<!--
+<iframe width="280" height="300" src="https://i.tianqi.com/?c=code&a=getcode&id=55&icon=1&color=FFFFFF" frameborder="0"></iframe>
+-->
+
+<!--    <div class="tel">
+      <ul>
+        <li><a href="">设为首页</a></li>
+        <li><a href="">加入收藏</a></li>
+        <li class="tel_con">电话：400-000-0000</li>
+      </ul>
+    </div>
+-->
+  </div>
+<!-- left nav end-->
+  <div class="index_right fr">   
+
+  <div class="bqleft">   
+
+  <div id="sticker-board-app" class="app-wrapper">  
+  <div class="controlls-wrapper">
+    <div class="controlls-setting">
+<!--        <span class="controlls-setting__name">本地存储开关</span>    
+      <label class="switch-toggle">
+        <input class="switch-toggle__input" type="checkbox" v-model="enableSaveToLocalStorage">
+        <div class="switch-toggle__control"></div>
+      </label>
+  -->
+    </div>
+    <div class="controlls-setting">
+<!--     <button class="controlls-setting__button controlls-setting__button_style_alert" v-on:click="removeAll">删除全部标签</button>   -->
+    </div>
+  </div>
+
+  <div class="sticker-block sticker-block_type_content" v-on:dblclick="startEditingSticker(index)" v-for="(sticker, index) in stickers">
+    <div class="sticker-block__header">
+      <div class="sticker-block__del-button" v-on:click="removeSticker(index)">&times;</div>
+    </div>
+    <div class="sticker-block__inner">
+      <div class="sticker-block__text" v-on:dblclick="startEditingSticker(index)" v-show="!sticker.isEditing">
+        {{sticker.text}}
+      </div>
+      <textarea rows="9" class="sticker-block__textarea" v-focus v-if="sticker.isEditing" v-on:blur="endEditingSticker" v-on:keydown.enter.prevent="endEditingSticker" v-model="sticker.text">
+      </textarea>
+    </div>
+  </div>
+
+  <div class="sticker-block sticker-block_type_add-sticker">
+    <div class="sticker-block__add-button" v-on:click="addSticker">+</div>
+  </div>
+
+</div>
+
+
+
+
+
+ </div>
+
+<iframe scrolling="no" src="./万年历/万年历.html" frameborder="0" width="340" height="490" allowtransparency="true"  style="position: fixed;  top: 30px;right: 50px;" ></iframe>
+ <!--   <div class="banner"><img src="images/banner.jpg" /></div>   -->
+
+
+ <!--      <div class="banner"><iframe scrolling="no" src="https://widget.tianqiapi.com/?style=tw&skin=pitaya" frameborder="0" width=300 height="500" allowtransparency="true" ></iframe></div>
+-->
+
+ <!--
+
+
+<div class="banner">
+
+
+  <div class="controlls-wrapper">
+    <div class="controlls-setting">
+      <span class="controlls-setting__name">Local Storage</span>
+      <label class="switch-toggle">
+        <input class="switch-toggle__input" type="checkbox" v-model="enableSaveToLocalStorage">
+        <div class="switch-toggle__control"></div>
+      </label>
+    </div>
+    <div class="controlls-setting">
+      <button class="controlls-setting__button controlls-setting__button_style_alert" v-on:click="removeAll">Clear all</button>
+    </div>
+  </div>
+
+  <div class="sticker-block sticker-block_type_content" v-on:dblclick="startEditingSticker(index)" v-for="(sticker, index) in stickers">
+    <div class="sticker-block__header">
+      <div class="sticker-block__del-button" v-on:click="removeSticker(index)">&times;</div>
+    </div>
+    <div class="sticker-block__inner">
+      <div class="sticker-block__text" v-on:dblclick="startEditingSticker(index)" v-show="!sticker.isEditing">
+        {{sticker.text}}
+      </div>
+      <textarea rows="9" class="sticker-block__textarea" v-focus v-if="sticker.isEditing" v-on:blur="endEditingSticker" v-on:keydown.enter.prevent="endEditingSticker" v-model="sticker.text">
+      </textarea>
+    </div>
+  </div>
+
+  <div class="sticker-block sticker-block_type_add-sticker">
+    <div class="sticker-block__add-button" v-on:click="addSticker">+</div>
+  </div>
+
+
+
+
+
+<iframe scrolling="no" src="./万年历/万年历.html" frameborder="0" width="340" height="490" allowtransparency="true"  style="float: right;"></iframe>
+
+ <!-- 
+<iframe scrolling="no" src="https://widget.tianqiapi.com/?style=ts&skin=mango&color=33CCFF" frameborder="0" width="325" height="220" allowtransparency="true"></iframe>
+-->
+
+
+  </div>  
+
+ 
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js'></script><script  src="./js/script.js"></script>
+
+
+
+</body>
+</html>

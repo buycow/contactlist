@@ -1,0 +1,86 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全市通讯录</title>
+<link rel="stylesheet" type="text/css" href="css/css.css"  />
+
+
+
+<style type="text/css">
+#Content-Left{
+    height:200px;
+    width:360px;
+    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+    background:#CCFFFF;
+
+}
+</style>
+
+
+<link rel="icon" href="./images/33.ico">
+<script src="./js/pwds.js"></script>
+
+</head>
+
+<body onload="get()">
+<div class="wrap clearfix">
+<!-- left nav start -->
+  <div class="index_left fl">
+   <div class="logo"><img src="images/logo.jpg"  /></div>    
+
+    <div class="nav">
+      <ul>
+        <li id="nav_01"><a href="index.html" >首页</a></li>
+        <li><a href="list.html" >各县区、经济功能区</a></li>
+        <li><a href="show.html" >市直</a></li>
+        <li><a href="about.html" >直属机构</a></li>
+        <li><a href="other.html">其它单位</a></li>
+        <li><a href="contact.html" >政务公开科账号密码</a></li>
+        <li><a href="passset.html" >账号密码设置</a></li>
+      </ul>
+
+    </div>
+    
+
+  </div>
+<!-- left nav end-->
+
+<!--right-->
+  <div class="show_right fr">
+ 
+    <div class="main">
+<!--     <div class="locat">账号密码</div>   -->
+     
+    <div class="content clearfix"> 
+
+  <div id="Content-Left">
+    <h3 style="text-align:center;">集约化平台账号密码设置</h3>
+      <p1 id="accounttextfield2" hidden="hidden"> </p1>
+      账号：<input type="text" id="accounttext" /> <input type="button" value="修改" onclick="accountsave()" /> <br />  
+      密码：<input type="text" id="pwdtext" /> <input type="button" value="修改" onclick="pwdsave()" /><br/>   
+
+
+
+  </div>
+
+
+  </div>
+    
+    
+     <!--footer start
+    <div class="footer">
+      <div class="footer01">注意保护账号密码</div>
+      <div class="footerwby">
+      </div>
+    </div>
+   footer end--> 
+
+
+
+   </div>
+  </div>
+ </div>
+</body>
+</html>

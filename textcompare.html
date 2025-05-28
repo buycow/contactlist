@@ -1,0 +1,182 @@
+<html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>全市通讯录</title>
+<link rel="stylesheet" type="text/css" href="css/css.css"  />
+
+<link rel="stylesheet" type="text/css" href="css/pswd.css"  />
+
+<style type="text/css">
+#Content-Left{
+    height:200px;
+    width:360px;
+    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+    background:#CCFFFF;
+
+}
+
+/*设置不同比文本颜色*/
+  .different { background-color: yellow; }
+
+
+/*对比文本边框*/
+textarea {
+  border: 3px solid #000000; /* 设置边框为2px宽、实线和黑色 */
+  border-radius: 5px; /* 可选：设置边框圆角 */
+
+}
+
+</style>
+
+
+<link rel="icon" href="./images/33.ico">
+
+
+</head>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("Text2").value;
+if(x=='000')
+{  
+
+//   alert("密码正确" );
+window.location.href="contact.html";
+
+}
+else
+{
+     alert("密码错误，请重新输入！" );
+}
+
+}
+</script>
+
+
+
+
+
+
+<body onload="get()">
+<div class="wrap clearfix">
+<!-- left nav start -->
+  <div class="index_left fl">
+   <div class="logo"><img src="images/logo.jpg"  /></div>    
+
+    <div class="nav">
+      <ul>
+        <li id="nav_01"><a href="index.html" >首页</a></li>
+        <li><a href="list.html" >各县区、经济功能区</a></li>
+        <li><a href="show.html" >市直</a></li>
+        <li><a href="about.html" >直属机构</a></li>
+        <li><a href="other.html">其它单位</a></li>
+        <li><a href="password2.html" >政务公开科账号密码</a></li>
+        <li><a href="textcompare.html" >文本比较</a></li>
+      </ul>
+
+    </div>
+    
+
+  </div>
+<!-- left nav end-->
+
+<!--right-->
+  <div class="show_right fr">
+ 
+    <div class="main">
+<!--     <div class="locat">账号密码</div>   -->
+     
+    <div class="content clearfix"> 
+
+
+
+
+<h3 style="margin-bottom: 3px;text-align: center;">文本比较工具</h3>
+<div>
+  <div>文本1</div>
+<!--<label for="text1">文本1:</label> -->
+  <textarea id="text1" rows="20" cols="190"></textarea>
+</div>
+<div>
+  <div>文本2</div>
+<!--  <label for="text2">文本2:</label>  -->
+  <textarea id="text2" rows="20" cols="190"></textarea>
+</div>
+<button onclick="compareTexts()">点击比较</button>
+<div id="difference"></div>
+ 
+<script>
+function compareTexts() {
+  var text1 = document.getElementById('text1').value.replace(/\s+/g, '');
+  var text2 = document.getElementById('text2').value.replace(/\s+/g, '');
+  var difference = '';
+  var len = Math.max(text1.length, text2.length);
+  var len1 = text1.length;
+  var len2 = text2.length;
+
+
+    if (text1 === text2) {
+        result = "文本完全相同。";
+    document.getElementById('difference').innerText = result;
+    } else {
+        result = "文本不相同。";
+    
+ if(len1>len2)
+  {
+     difference+= "文本1内容：";
+  }
+else
+  {
+    difference+= "文本2内容：";
+  }
+
+
+  for (var i = 0; i < len; i++) {
+    if (text1[i] !== text2[i]) {
+if(len1>len2){difference += '<span class="different">' + (text1[i] || '') + '</span>';}
+else
+{
+
+      difference += '<span class="different">' + (text2[i] || '') + '</span>';}
+
+
+    } else {
+      difference += text2[i];
+    }
+  }
+ 
+
+
+  document.getElementById('text2').innerText = difference;
+  document.getElementById('difference').innerHTML = difference;
+}
+
+}
+</script>
+
+ 
+
+
+
+
+
+  </div>
+    
+    
+     <!--footer start
+    <div class="footer">
+      <div class="footer01">注意保护账号密码</div>
+      <div class="footerwby">
+      </div>
+    </div>
+   footer end--> 
+
+
+
+   </div>
+  </div>
+ </div>
+</body>
+</html>

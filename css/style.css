@@ -1,0 +1,190 @@
+body {
+  background-color: #EDDEA4;
+  color: #253031;
+  font-size: 20px;
+  heigth: 100vh;
+}
+.app-wrapper {
+  padding: 5px 15px 0 5px;
+}
+@media (min-width: 600px) {
+  .app-wrapper {
+    padding: 5px;
+  }
+}
+@media (min-width: 1060px) {
+  .app-wrapper {
+    margin: 0 auto;
+    padding: 5px 30px;
+    max-width: 1660px;
+    min-height: 98vh;
+//    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.3);
+
+  }
+}
+.sticker-block {
+  vertical-align: top;
+  display: inline-block;
+  height: 200px;
+  width: 100%;
+  border-radius: 2px;
+  margin: 5px 5px 5px 5px;
+}
+@media (min-width: 600px) {
+  .sticker-block {
+    width: 200px;
+  }
+}
+.sticker-block__wrapper {
+  min-height: 200px;
+  margin: 0px 0 5px 0;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .sticker-block__wrapper {
+    display: inline-block;
+    margin: 0 0 0 0;
+  }
+}
+.sticker-block__header {
+  background: #fed04d;
+  width: 100%;
+  height: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sticker-block__textarea {
+  background-color: #FED766;
+  resize: none;
+  outline: none;
+  overflow-y: auto;
+  border: none;
+  margin: 0 0 0 0;
+  width: 98%;
+}
+.sticker-block__del-button {
+  cursor: pointer;
+  font-size: 1.7rem;
+  line-height: 0;
+}
+.sticker-block__text {
+  font-weight: bold;
+  max-height: 160px;
+  overflow-y: auto;
+  overflow-x: hidden;
+ word-wrap: break-word;
+}
+.sticker-block__inner {
+  padding: 5px 10px 0 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.sticker-block__add-button {
+
+  min-height:33;  //确保父元素的高度足够，可以设置一个固定高度或者使用 `min-height` 属性。垂直居中无效，可能是由于父元素的高度不够。
+  cursor: pointer;
+  font-size: 13rem;
+  line-height: 0;
+  color: #FE4A49;
+  transition: 0.2s linear;
+  transition-property: text-shadow;
+}
+.sticker-block__add-button:hover {
+  transition: 0.2s linear;
+  text-shadow: 1px 1px 2px #253031;
+}
+.sticker-block_type_content {
+  background: #FED766;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 600px) {
+  .sticker-block_type_content {
+    font-size: 0.97rem;
+  }
+}
+.sticker-block_type_add-sticker {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #fee499;
+  border: 2px dashed #FE4A49;
+}
+.controlls-wrapper {
+  margin: 10px 0 10px 4px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 600px) {
+  .controlls-wrapper {
+    justify-content: flex-start;
+  }
+}
+.controlls-setting {
+  display: inline-flex;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .controlls-setting {
+    margin-right: 30px;
+  }
+}
+.controlls-setting__name {
+  margin-right: 10px;
+}
+.controlls-setting__button {
+  border: none;
+  border-radius: 10px;
+  padding: 4px 8px 3px 7px;
+  outline: none;
+}
+.controlls-setting__button_style_alert {
+  background-color: #FE4A49;
+  color: #F2F2ED;
+  transition: 0.2s linear;
+}
+.controlls-setting__button_style_alert:hover {
+  background-color: #f90301;
+  color: #ffffff;
+  transition: 0.2s linear;
+}
+.controlls-setting + .controlls-setting {
+  margin-right: 0;
+}
+.switch-toggle {
+  display: inline-block;
+}
+.switch-toggle__control {
+  transition: 0.15s ease;
+  display: block;
+  width: 40px;
+  height: 20px;
+  border: 2px solid rgba(37, 48, 49, 0.4);
+  border-radius: 20px;
+  position: relative;
+  background-color: #C5C5C5;
+}
+.switch-toggle__control::after {
+  transition: 0.15s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #F2F2ED;
+  box-shadow: 0 1px 1px #253031;
+}
+.switch-toggle__input {
+  display: none;
+}
+.switch-toggle__input:checked + .switch-toggle__control {
+  background-color: #00A878;
+  border-color: #00A878;
+}
+.switch-toggle__input:checked + .switch-toggle__control::after {
+  left: 20px;
+}
